@@ -1,5 +1,7 @@
 package com.plursalsight;
 
+import com.plursalsight.Enum.Size;
+
 public abstract  class Topping {
     // protected fields for sub access
     protected String name;
@@ -35,18 +37,20 @@ public abstract  class Topping {
         }
     }
     public void setPrice(Size size, double price ){
-        switch (size){
+        switch (size) {
             case SMALL:
                 priceSmall = price;
                 break;
-            case MEDIUM :
+            case MEDIUM:
                 priceMedium = price;
                 break;
 
             case LARGE:
                 priceLarge = price;
                 break;
-
+        }
     }
-
-}}
+    @Override
+    public String toString(){
+            return name; }
+}
