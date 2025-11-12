@@ -24,11 +24,14 @@ public class Order  {
     }
 
     // contract if we want to supplay id and date
+
     public Order(String id, LocalDateTime dateAndTime, List<Product> products, boolean isCompleted) {
         Id = id;
         this.dateAndTime = dateAndTime;
-        this.isCompleted = false;
+        this.products = products;
+        this.isCompleted = isCompleted;
     }
+
 
     // getter and setter
 
@@ -53,7 +56,7 @@ public class Order  {
         products.remove(product); }
 
   public  List<Product> getProducts(){
-      return List.of(); };
+      return products; };
 
     public  double calculateTotal(){
         return  products.stream().mapToDouble(Product::calculatePrice).sum();
@@ -74,7 +77,7 @@ public class Order  {
             builder.append(" - ")
                     .append(p.getName())
                     .append("(").append(p.getSize().getDisplayName()) .append(") : $ ")
-                    .append(String.format("$.2f", p.calculatePrice()))
+                    .append(String.format("%.2f", p.calculatePrice()))
                     .append("\n");
         }
         builder.append("\n\n");
