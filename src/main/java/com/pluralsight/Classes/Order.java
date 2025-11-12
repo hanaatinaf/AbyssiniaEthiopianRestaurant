@@ -45,7 +45,6 @@ public class Order  {
 
     public void setCompleted(boolean completed) {
         isCompleted = completed; }
-
     // methods
 
   public  void addProduct(Product product){
@@ -70,6 +69,17 @@ public class Order  {
         builder.append("Order ID " ).append(Id).append("\n");
         builder.append("Date: ").append(dateAndTime.format(formatter)).append("\n");
         builder.append("Iteam: \n ");
+
+        for (Product p : products){
+            builder.append(" - ")
+                    .append(p.getName())
+                    .append("(").append(p.getSize().getDisplayName()) .append(") : $ ")
+                    .append(String.format("$.2f", p.calculatePrice()))
+                    .append("\n");
+        }
+        builder.append("\n\n");
+        builder.append(String.format("Total: $%.2f " , calculateTotal())).append("\n");
+        return  builder.toString();
 
 
 
