@@ -1,8 +1,14 @@
 package com.pluralsight.Classes;
 
 import com.pluralsight.Abstract.Product;
+import com.pluralsight.Classes.EthiopianFoodItem;
 import com.pluralsight.Abstract.Topping;
+import com.pluralsight.Classes.Toppings.PremiumTopping;
+import com.pluralsight.Enum.Size;
 import com.pluralsight.Classes.Drink.Drink;
+
+
+
 
 
 import java.time.*;
@@ -21,15 +27,13 @@ public class Order {
 
     private String id;
     private LocalDateTime dateTime;
-    private final List<Product> products;
+    private final List<Product>  products;
     private boolean isCompleted;
 
     private static final DateTimeFormatter ID_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
-    /**
-     * Creates a new order with a generated id and current timestamp.
-     */
+
     public Order() {
         this.dateTime = LocalDateTime.now();
         this.id = dateTime.format(ID_FORMAT); // example: 20251112-153045
@@ -51,19 +55,14 @@ public class Order {
         return isCompleted;
     }
 
-    /**
-     * Returns an unmodifiable list so external code cannot
-     * directly change the internal list.
-     */
+
     public List<Product> getProducts() {
         return Collections.unmodifiableList(products);
     }
 
     // --- Order operations ---
 
-    /**
-     * Adds a product (EthiopianFoodItem, Drink, Side) to the order.
-     */
+
     public void addProduct(Product product) {
         if (product != null && !isCompleted) {
             products.add(product);
@@ -79,9 +78,7 @@ public class Order {
         }
     }
 
-    /**
-     * Calculates the total cost of all products in the order.
-     */
+
 
     public double calculateTotal() {
         // Uses Java Streams to sum up product prices
@@ -89,43 +86,58 @@ public class Order {
                 .mapToDouble(Product::calculatePrice)
                 .sum();
     }
-    /**
-     * Marks this order as completed (usually after checkout).
-     * You could also refresh the timestamp here if needed.
-     */
+
     public void completeOrder() {
         this.isCompleted = true;
-        // Optionally update dateTime when order is completed:
-        // this.dateTime = LocalDateTime.now();
-        // this.id = dateTime.format(ID_FORMAT);
+
     }
 
-    /**
-     * Builds a text receipt for this order.
-     * This string is used both for displaying on screen and
-     * for writing to the receipt file.
-     */
+
     public String generateReceipt() {
         StringBuilder sb = new StringBuilder();
+        // Format the date/time nicely: 2025-11-12 07:28 PM
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
+        String formattedDateTime = dateTime.format(formatter);
 
         // Header
-        sb.append("===== Ethiopian Restaurant Receipt =====");
+        sb.append("=====  Ethiopian Restaurant Receipt =====\n");
         sb.append("Order ID : ").append(id).append("\n");
-        sb.append("Date/Time: ").append(dateTime).append("\n");
-        sb.append("=============================================");
+        sb.append("Date/Time: ").append(formattedDateTime).append("\n");
+        sb.append("---------------------------------------\n");
+
+        double orderTotal = 0.0;
 
         // Line items
         for (Product product : products) {
-            String line = String.format("%-30s %6.2f\n",
-                    product.toString(),
-                    product.calculatePrice());
-            sb.append(line);
+            double linePrice = product.calculatePrice();
+
+            String lineName;
+
+            // If it's a Drink, show the drink flavor/type instead of just "Drink"
+            if (product instanceof Drink) {
+                Drink drink = (Drink) product;
+                // Just the flavor, like "Layered Mixed Juice"
+                lineName = drink.getFlavor();
+                // If you prefer: lineName = "Drink - " + drink.getFlavor();
+            } else {
+                // For food and sides, keep using the product name
+                lineName = product.getName();
+            }
+
+            // Add size if available
+            if (product.getSize() != null) {
+                lineName += " (" + product.getSize().getDisplayName() + ")";
+            }
+
+            sb.append(String.format("%-30s %6.2f%n", lineName, linePrice));
         }
 
-        sb.append("=============================================");
-        sb.append(String.format("TOTAL: %34.2f ", calculateTotal()));
         sb.append("=======================================\n");
+        sb.append(String.format("TOTAL:%34.2f%n", calculateTotal()));
+        sb.append("=======================================\n");
+
 
         return sb.toString();
     }
+
 }

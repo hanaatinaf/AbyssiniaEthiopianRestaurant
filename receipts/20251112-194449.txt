@@ -1,0 +1,9 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251112-194449
+Date/Time: 2025-11-12 07:44 PM
+---------------------------------------
+Ethiopian Cottage Cheese (Large)   1.50
+Spiced Black Tea (Large)         3.00
+=======================================
+TOTAL:                              4.50
+=======================================

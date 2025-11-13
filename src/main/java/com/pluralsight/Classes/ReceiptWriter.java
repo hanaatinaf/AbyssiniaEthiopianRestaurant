@@ -4,13 +4,7 @@ package com.pluralsight.Classes;
 import java.io.*;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Handles writing order receipts to text files using BufferedWriter.
- *
- * Each order is saved in a separate file named:
- *   yyyyMMdd-HHmmss.txt
- * inside the outputPath folder.
- */
+
 public class ReceiptWriter {
 
     private final String outputPath;
@@ -19,29 +13,18 @@ public class ReceiptWriter {
     private static final DateTimeFormatter FILE_FORMATTER =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
-    /**
-     * @param outputPath directory where receipt files will be stored
-     *                   (e.g., "receipts")
-     */
+
     public ReceiptWriter(String outputPath) {
         this.outputPath = outputPath;
     }
 
-    /**
-     * Generates the receipt file name for a given order.
-     * Uses the order's date/time in the format: yyyyMMdd-HHmmss.txt
-     */
+
     public String generateFileName(Order order) {
         String timestamp = order.getDateTime().format(FILE_FORMATTER);
         return timestamp + ".txt";
     }
 
-    /**
-     * Saves the receipt for the given order to a text file
-     * using BufferedWriter.
-     *
-     * @return true if the file was written successfully, false otherwise.
-     */
+
     public boolean save(Order order) {
         // Ensure the directory exists
         File directory = new File(outputPath);
