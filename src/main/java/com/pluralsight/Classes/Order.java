@@ -100,11 +100,7 @@ public class Order {
         // this.id = dateTime.format(ID_FORMAT);
     }
 
-    /**
-     * Builds a text receipt for this order.
-     * This string is used both for displaying on screen and
-     * for writing to the receipt file.
-     */
+
     public String generateReceipt() {
         StringBuilder sb = new StringBuilder();
 
