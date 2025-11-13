@@ -112,7 +112,12 @@ public class Order {
         sb.append("Date/Time: ").append(dateTime).append("\n");
         sb.append("---------------------------------------\n");
 
+        // Format the date/time nicely: 2025-11-12 07:28 PM
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
+        String formattedDateTime = dateTime.format(formatter);
+
         double orderTotal = 0.0;
+
 
         // Line items
         for (Product product : products) {
