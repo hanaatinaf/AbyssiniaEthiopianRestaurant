@@ -1,0 +1,15 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-131411
+Date/Time: 2025-11-13 01:14 PM
+---------------------------------------
+Kitfo Plate (Medium)            38.07
+   Details:
+     Base (Kitfo Plate x 1.50): 31.32
+     Special add-on:      3.00
+     Toppings:
+       • Doro Wot (Chicken Stew) (EXTRA)  3.75
+     Toppings total:      3.75
+
+---------------------------------------
+TOTAL:                             38.07
+=======================================

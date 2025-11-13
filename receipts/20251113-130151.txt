@@ -1,0 +1,15 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-130151
+Date/Time: 2025-11-13T13:01:51.224011
+---------------------------------------
+Beyaynetu Vegetarian (Small)    29.74
+   Details:
+     Base (Beyaynetu Vegetarian x 1.00): 25.99
+     Special add-on:      2.00
+     Toppings:
+       • Doro Wot (Chicken Stew)  1.75
+     Toppings total:      1.75
+
+---------------------------------------
+TOTAL:                             29.74
+=======================================
