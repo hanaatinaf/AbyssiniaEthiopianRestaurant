@@ -1,0 +1,14 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-184232
+Date/Time: 2025-11-13T18:42:32.976892
+---------------------------------------
+Kitfo Plate (Medium)            33.57
+   Details:
+     Base (Kitfo Plate x 1.50): 31.32
+     Toppings:
+       • Bozena Shiro (Meat Chickpea Stew)  2.25
+     Toppings total:      2.25
+
+---------------------------------------
+TOTAL:                             33.57
+=======================================

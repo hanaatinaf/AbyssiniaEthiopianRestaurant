@@ -1,10 +1,16 @@
 package com.pluralsight.Classes;
 
 import com.pluralsight.Abstract.Product;
+import com.pluralsight.Classes.EthiopianFoodItem;
 import com.pluralsight.Abstract.Topping;
+import com.pluralsight.Classes.Toppings.PremiumTopping;
+import com.pluralsight.Enum.Size;
 import com.pluralsight.Classes.Drink.Drink;
 import com.pluralsight.Classes.Toppings.PremiumTopping;
 import com.pluralsight.Enum.Size;
+
+
+
 
 
 import java.time.*;
@@ -23,15 +29,13 @@ public class Order {
 
     private String id;
     private LocalDateTime dateTime;
-    private final List<Product> products;
+    private final List<Product>  products;
     private boolean isCompleted;
 
     private static final DateTimeFormatter ID_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
-    /**
-     * Creates a new order with a generated id and current timestamp.
-     */
+
     public Order() {
         this.dateTime = LocalDateTime.now();
         this.id = dateTime.format(ID_FORMAT); // example: 20251112-153045
@@ -53,19 +57,14 @@ public class Order {
         return isCompleted;
     }
 
-    /**
-     * Returns an unmodifiable list so external code cannot
-     * directly change the internal list.
-     */
+
     public List<Product> getProducts() {
         return Collections.unmodifiableList(products);
     }
 
     // --- Order operations ---
 
-    /**
-     * Adds a product (EthiopianFoodItem, Drink, Side) to the order.
-     */
+
     public void addProduct(Product product) {
         if (product != null && !isCompleted) {
             products.add(product);
@@ -81,9 +80,7 @@ public class Order {
         }
     }
 
-    /**
-     * Calculates the total cost of all products in the order.
-     */
+
 
     public double calculateTotal() {
         // Uses Java Streams to sum up product prices
@@ -91,15 +88,10 @@ public class Order {
                 .mapToDouble(Product::calculatePrice)
                 .sum();
     }
-    /**
-     * Marks this order as completed (usually after checkout).
-     * You could also refresh the timestamp here if needed.
-     */
+
     public void completeOrder() {
         this.isCompleted = true;
-        // Optionally update dateTime when order is completed:
-        // this.dateTime = LocalDateTime.now();
-        // this.id = dateTime.format(ID_FORMAT);
+
     }
 
 

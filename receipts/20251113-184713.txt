@@ -1,0 +1,17 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-184713
+Date/Time: 2025-11-13T18:47:13.930307
+---------------------------------------
+Beyaynetu Vegetarian (Medium)   52.49
+   Details:
+     Base (Beyaynetu Vegetarian x 1.50): 38.99
+     Special add-on:      3.00
+     Toppings:
+       • Gomen (Collard Greens)  4.50
+       • Extra Kitfo (EXTRA)  3.75
+       • Bozena Shiro (Meat Chickpea Stew)  2.25
+     Toppings total:      10.50
+
+---------------------------------------
+TOTAL:                             52.49
+=======================================
