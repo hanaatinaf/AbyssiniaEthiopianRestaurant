@@ -1,7 +1,6 @@
 package com.pluralsight.Classes;
 
-import com.pluralsight.Abstract.Item;
-import com.pluralsight.Abstract.Topping;
+import com.pluralsight.Abstract.*;
 import com.pluralsight.Classes.Toppings.PremiumTopping;
 import com.pluralsight.Classes.Toppings.RegularTopping;
 import com.pluralsight.Enum.FoodType;
@@ -9,7 +8,7 @@ import com.pluralsight.Enum.Size;
 
 public class EthiopianFoodItem extends Item {
 
-    // ---- Base prices per size (you can tune these) ----
+    // Base prices per size (you can tune these)
     // These correspond to the "Type 1-4" base row in the Custom spec.
     private static final double BASE_SMALL  = 3.50; // Size 1
     private static final double BASE_MEDIUM = 9.00; // Size 2
@@ -26,12 +25,9 @@ public class EthiopianFoodItem extends Item {
         super(type.getDisplayName(), size, type);
     }
 
-    /**
-     * Calculates the total price of this Ethiopian plate:
-     * 1) base price by size
-     * 2) + toppings total
-     * 3) + specialized extra (if isSpecialized == true)
-     */
+    // Calculates the total price of this Ethiopian plate:
+    // 1) base price by size 2) + toppings total 3) + specialized extra (if isSpecialized == true)
+
 
     @Override
     public double calculatePrice() {
@@ -55,7 +51,6 @@ public class EthiopianFoodItem extends Item {
                 basePrice = 9.00;
                 break;
         }
-
         // 2) Apply size multiplier (from your Size enum)
         double sizeMultiplier = getSize().getPriceMultiplier();
         double price = basePrice * sizeMultiplier;
@@ -66,22 +61,12 @@ public class EthiopianFoodItem extends Item {
             double specialCharge = 2.00 * sizeMultiplier;
             price += specialCharge;
         }
-
         // 4) Add toppings cost (regular + premium)
         if (getToppings() != null && !getToppings().isEmpty()) {
             for (Topping t : getToppings()) {
                 price += t.getPrice(getSize());
-            }
-        }
-
-        return price;
+            } } return price;
     }
-
-
-    // --------------------------------------------------------------------
-    // Signature item factory methods (like BLT / Philly in DELI example)
-    // These create pre-configured plates with default toppings.
-    // --------------------------------------------------------------------
 
     public static EthiopianFoodItem createBeyaynetu(Size size) {
         EthiopianFoodItem item =
@@ -98,7 +83,6 @@ public class EthiopianFoodItem extends Item {
 
         return item;
     }
-
     public static EthiopianFoodItem createTibsPlate(Size size) {
         EthiopianFoodItem item =
                 new EthiopianFoodItem(FoodType.TIBS_PLATE, size);
@@ -108,7 +92,6 @@ public class EthiopianFoodItem extends Item {
 
         return item;
     }
-
     public static EthiopianFoodItem createKitfoPlate(Size size) {
         EthiopianFoodItem item =
                 new EthiopianFoodItem(FoodType.KITFO_PLATE, size);
@@ -122,7 +105,6 @@ public class EthiopianFoodItem extends Item {
 
         return item;
     }
-
     public static EthiopianFoodItem createInjeraCombo(Size size) {
         EthiopianFoodItem item =
                 new EthiopianFoodItem(FoodType.INJERA_COMBO, size);

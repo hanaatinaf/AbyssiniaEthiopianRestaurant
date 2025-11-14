@@ -1,31 +1,21 @@
 package com.pluralsight.Abstract;
-
 import com.pluralsight.Enum.Size;
 
-
 public abstract class Topping {
-
     private String name;
     private double priceSmall;
     private double priceMedium;
     private double priceLarge;
 
     protected Topping(String name) {
-        this.name = name;
-    }
-
-
-
+        this.name = name; }
     public String getName() {
-        return name;
-    }
+        return name;}
 
     public void setName(String name) {
         this.name = name;
     }
-
     //  Price getters / setters
-
     public double getPrice(Size size) {
         switch (size) {
             case SMALL:

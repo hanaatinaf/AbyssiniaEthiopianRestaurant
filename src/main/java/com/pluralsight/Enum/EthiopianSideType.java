@@ -1,8 +1,6 @@
 package com.pluralsight.Enum;
 
-
-
- // Ethiopian side items included or optional.
+// Ethiopian side items included or optional.
 
 public enum EthiopianSideType {
 
@@ -13,17 +11,11 @@ public enum EthiopianSideType {
     EXTRA_INJERA("Additional Injera");
 
     private final String displayName;
-
-    EthiopianSideType(String displayName) {
-        this.displayName = displayName;
-    }
-
+    EthiopianSideType(String displayName) { this.displayName = displayName;}
     public String getDisplayName() {
         return displayName;
     }
 
     @Override
-    public String toString() {
-        return displayName;
-    }
+    public String toString() { return displayName; }
 }

@@ -7,9 +7,8 @@ import com.pluralsight.Enum.Size;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * Handles side selection and Side creation.
- */
+//Handles side selection and Side creation.
+
 public class SideMenu {
 
     private final Scanner scanner;
@@ -18,9 +17,9 @@ public class SideMenu {
         this.scanner = scanner;
     }
 
-    /**
-     * Shows side menu and returns the chosen Side.
-     */
+
+     // Shows side menu and returns the chosen Side.
+
     public Side handleAddSide() {
         System.out.println();
         System.out.println("🥗  የጎን ምግብ መጨመሪያ | ADD SIDE");
@@ -47,7 +46,7 @@ public class SideMenu {
         return side;
     }
 
-    // ---------- helpers ----------
+    //  helpers
 
     private Size promptForSize() {
         System.out.println("📏  Choose size:");

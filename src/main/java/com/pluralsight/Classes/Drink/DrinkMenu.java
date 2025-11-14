@@ -1,17 +1,11 @@
 package com.pluralsight.Classes.Drink;
-
-
-
-import com.pluralsight.Classes.Drink.Drink;
 import com.pluralsight.Enum.EthiopianDrinkType;
 import com.pluralsight.Enum.Size;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * Handles drink selection and Drink creation.
- */
+ //Handles drink selection and Drink creation.
+
 public class DrinkMenu {
 
     private final Scanner scanner;
@@ -20,9 +14,8 @@ public class DrinkMenu {
         this.scanner = scanner;
     }
 
-    /**
-     * Shows drink menu and returns the chosen Drink.
-     */
+    // Shows drink menu and returns the chosen Drink.
+
     public Drink handleAddDrink() {
         System.out.println();
         System.out.println("🥤  መጠጥ መጨመሪያ | ADD DRINK");
@@ -51,8 +44,7 @@ public class DrinkMenu {
 
         return drink;
     }
-
-    // ---------- helpers ----------
+    //  helpers
 
     private Size promptForSize() {
         System.out.println("📏  Choose size:");
@@ -64,7 +56,6 @@ public class DrinkMenu {
         int choice = readIntInRange(1, sizes.length);
         return sizes[choice - 1];
     }
-
     private int readInt() {
         while (true) {
             try {
@@ -75,7 +66,6 @@ public class DrinkMenu {
             }
         }
     }
-
     private int readIntInRange(int min, int max) {
         int value;
         while (true) {

@@ -1,30 +1,16 @@
 package com.pluralsight.Classes;
 
-import com.pluralsight.Abstract.Product;
-import com.pluralsight.Classes.EthiopianFoodItem;
-import com.pluralsight.Abstract.Topping;
+import com.pluralsight.Abstract.*;
 import com.pluralsight.Classes.Toppings.PremiumTopping;
 import com.pluralsight.Enum.Size;
-import com.pluralsight.Classes.Drink.Drink;
-import com.pluralsight.Classes.Toppings.PremiumTopping;
-import com.pluralsight.Enum.Size;
-
-
-
-
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+// Represents a customer's order. An order contains multiple products (main dishes, drinks, sides),
+ //knows when it was created, and can generate a receipt string.
 
-
-
-/**
- * Represents a customer's order.
- * An order contains multiple products (main dishes, drinks, sides),
- * knows when it was created, and can generate a receipt string.
- */
 public class Order {
 
     private String id;
@@ -35,66 +21,50 @@ public class Order {
     private static final DateTimeFormatter ID_FORMAT =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
-
     public Order() {
         this.dateTime = LocalDateTime.now();
         this.id = dateTime.format(ID_FORMAT); // example: 20251112-153045
         this.products = new ArrayList<>();
         this.isCompleted = false;
     }
-
-    // --- Basic getters ---
+    // Basic getters
 
     public String getId() {
-        return id;
-    }
+        return id; }
 
     public LocalDateTime getDateTime() {
-        return dateTime;
-    }
+        return dateTime; }
 
     public boolean isCompleted() {
-        return isCompleted;
-    }
+        return isCompleted; }
 
 
     public List<Product> getProducts() {
-        return Collections.unmodifiableList(products);
-    }
+        return Collections.unmodifiableList(products); }
 
-    // --- Order operations ---
+    // Order operations
 
 
     public void addProduct(Product product) {
         if (product != null && !isCompleted) {
-            products.add(product);
-        }
+            products.add(product); }
     }
-
-    /**
-     * Removes a product from the order.
-     */
+    //Removes a product from the order.
     public void removeProduct(Product product) {
         if (!isCompleted) {
             products.remove(product);
         }
     }
-
-
-
     public double calculateTotal() {
         // Uses Java Streams to sum up product prices
         return products.stream()
                 .mapToDouble(Product::calculatePrice)
                 .sum();
     }
-
     public void completeOrder() {
         this.isCompleted = true;
 
     }
-
-
     public String generateReceipt() {
         StringBuilder sb = new StringBuilder();
 
@@ -124,9 +94,7 @@ public class Order {
 
             sb.append(String.format("%-30s %6.2f%n", lineName, linePrice));
 
-            // -----------------------------------------------
             // Extra breakdown ONLY for EthiopianFoodItem
-            // -----------------------------------------------
             if (product instanceof EthiopianFoodItem) {
                 EthiopianFoodItem food = (EthiopianFoodItem) product;
                 Size size = food.getSize();
@@ -195,10 +163,7 @@ public class Order {
                             toppingsTotal));
                 } else {
                     sb.append("     (No toppings)\n");
-                }
-
-                sb.append("\n");
-            }
+                } sb.append("\n"); }
         }
 
         sb.append("---------------------------------------\n");

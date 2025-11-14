@@ -1,16 +1,10 @@
 package com.pluralsight.Classes.Toppings;
-
-
 import com.pluralsight.Classes.EthiopianFoodItem;
-import com.pluralsight.Classes.Toppings.PremiumTopping;
-import com.pluralsight.Classes.Toppings.RegularTopping;
+import java.util.*;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
-/**
- * Handles adding regular and premium toppings to an EthiopianFoodItem.
- */
+// Handles adding regular and premium toppings to an EthiopianFoodItem.
+
 public class ToppingMenu {
 
     private final Scanner scanner;
@@ -18,10 +12,8 @@ public class ToppingMenu {
     public ToppingMenu(Scanner scanner) {
         this.scanner = scanner;
     }
+    // Lets the user add regular or premium toppings to the given item.
 
-    /**
-     * Lets the user add regular or premium toppings to the given item.
-     */
     public void promptForToppings(EthiopianFoodItem item) {
         System.out.print("Would you like to add toppings? (y/n): ");
         String input = scanner.next().trim().toLowerCase();
@@ -35,15 +27,13 @@ public class ToppingMenu {
                 "Misir Wot (Spicy Lentils)",
                 "Shiro (Chickpea Stew)",
                 "Fosolia (Green Beans & Carrots)",
-                "Atakilt (Cabbage & Carrot Mix)"
-        };
+                "Atakilt (Cabbage & Carrot Mix)"};
 
         String[] premiumOptions = {
                 "Extra Tibs",
                 "Extra Kitfo",
                 "Doro Wot (Chicken Stew)",
-                "Bozena Shiro (Meat Chickpea Stew)"
-        };
+                "Bozena Shiro (Meat Chickpea Stew)" };
 
         boolean adding = true;
 
@@ -55,14 +45,13 @@ public class ToppingMenu {
             System.out.print("👉  Choose an option: ");
 
             int choice = readInt();
-
             switch (choice) {
                 case 1:
                     System.out.println("🍀 Regular Toppings:");
                     for (int i = 0; i < regularOptions.length; i++) {
                         System.out.printf("%d) %s%n", i + 1, regularOptions[i]);
                     }
-                    System.out.print("👉  Choose a topping: ");
+                    System.out.print("👉 Choose a topping: ");
                     int regChoice = readIntInRange(1, regularOptions.length);
                     String regName = regularOptions[regChoice - 1];
 
@@ -95,11 +84,10 @@ public class ToppingMenu {
 
                 default:
                     System.out.println("⚠️  Invalid option.");
-            }
-        }
+            }}
     }
 
-    // --- local input helpers for this menu ---
+    // local input helpers for this menu
 
     private int readInt() {
         while (true) {
@@ -108,8 +96,7 @@ public class ToppingMenu {
             } catch (InputMismatchException e) {
                 System.out.print("Please enter a valid number: ");
                 scanner.next(); // clear invalid input
-            }
-        }
+            }}
     }
 
     private int readIntInRange(int min, int max) {
@@ -119,7 +106,6 @@ public class ToppingMenu {
             if (value >= min && value <= max) {
                 return value;
             }
-            System.out.print("Please enter a number between " + min + " and " + max + ": ");
-        }
+            System.out.print("Please enter a number between " + min + " and " + max + ": ");}
     }
 }

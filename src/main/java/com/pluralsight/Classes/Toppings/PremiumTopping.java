@@ -17,15 +17,11 @@ public class PremiumTopping extends Topping {
         setPrice(Size.MEDIUM, 2.25);
         setPrice(Size.LARGE, 2.75);
     }
-
     public boolean isExtra() {
-        return isExtra;
-    }
+        return isExtra;}
 
     public void setExtra(boolean extra) {
-        isExtra = extra;
-    }
-
+        isExtra = extra;}
 
     @Override
     public double getPrice(Size size) {

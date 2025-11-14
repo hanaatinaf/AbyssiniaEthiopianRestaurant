@@ -13,7 +13,6 @@ public class ReceiptWriter {
     private static final DateTimeFormatter FILE_FORMATTER =
             DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
-
     public ReceiptWriter(String outputPath) {
         this.outputPath = outputPath;
     }
