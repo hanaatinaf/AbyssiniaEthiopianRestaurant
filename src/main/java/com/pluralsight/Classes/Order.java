@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 // Represents a customer's order. An order contains multiple products (main dishes, drinks, sides),
- //knows when it was created, and can generate a receipt string.
+//knows when it was created, and can generate a receipt string.
 
 public class Order {
 

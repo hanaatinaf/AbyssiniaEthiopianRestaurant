@@ -1,0 +1,29 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251114-081007
+Date/Time: 2025-11-14T08:10:07.247477
+---------------------------------------
+Kitfo Plate (Medium)            53.82
+   Details:
+     Base (Kitfo Plate x 1.50): 31.32
+     Special add-on:      3.00
+     Toppings:
+       • Kitfo  2.25
+       • Gomen  4.50
+       • Ayib  4.50
+       • Extra Kitfo (EXTRA)  3.75
+       • Shiro (Chickpea Stew)  4.50
+     Toppings total:      19.50
+
+Kitfo Plate (Small)             24.63
+   Details:
+     Base (Kitfo Plate x 1.00): 20.88
+     Special add-on:      2.00
+     Toppings:
+       • Bozena Shiro (Meat Chickpea Stew)  1.75
+     Toppings total:      1.75
+
+Drink (Large)                    3.00
+Additional Injera (Medium)       1.50
+---------------------------------------
+TOTAL:                             82.95
+=======================================

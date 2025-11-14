@@ -1,0 +1,30 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251114-081306
+Date/Time: 2025-11-14T08:13:06.315744
+---------------------------------------
+Kitfo Plate (Medium)            53.82
+   Details:
+     Base (Kitfo Plate x 1.50): 31.32
+     Special add-on:      3.00
+     Toppings:
+       • Kitfo  2.25
+       • Gomen  4.50
+       • Ayib  4.50
+       • Fosolia (Green Beans & Carrots)  4.50
+       • Bozena Shiro (Meat Chickpea Stew) (EXTRA)  3.75
+     Toppings total:      19.50
+
+Beyaynetu Vegetarian (Large)    65.23
+   Details:
+     Base (Beyaynetu Vegetarian x 2.00): 51.98
+     Special add-on:      4.00
+     Toppings:
+       • Misir Wot (Spicy Lentils)  5.00
+       • Doro Wot (Chicken Stew) (EXTRA)  4.25
+     Toppings total:      9.25
+
+Drink (Small)                    2.00
+Additional Injera (Large)        1.50
+---------------------------------------
+TOTAL:                            122.55
+=======================================
