@@ -1,0 +1,21 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251114-001856
+Date/Time: 2025-11-14T00:18:56.257433
+---------------------------------------
+Tibs Plate (Large)              45.00
+   Details:
+     Base (Tibs Plate x 2.00): 36.00
+     Special add-on:      4.00
+     Toppings:
+       • Shiro (Chickpea Stew)  5.00
+     Toppings total:      5.00
+
+Kitfo Plate (Small)             22.88
+   Details:
+     Base (Kitfo Plate x 1.00): 20.88
+     Special add-on:      2.00
+     (No toppings)
+
+---------------------------------------
+TOTAL:                             67.88
+=======================================

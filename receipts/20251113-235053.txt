@@ -1,0 +1,16 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-235053
+Date/Time: 2025-11-13T23:50:53.596144
+---------------------------------------
+Drink (Medium)                   2.50
+Tibs Plate (Large)              45.00
+   Details:
+     Base (Tibs Plate x 2.00): 36.00
+     Special add-on:      4.00
+     Toppings:
+       • Atakilt (Cabbage & Carrot Mix)  5.00
+     Toppings total:      5.00
+
+---------------------------------------
+TOTAL:                             47.50
+=======================================

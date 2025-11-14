@@ -1,0 +1,26 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-215947
+Date/Time: 2025-11-13T21:59:47.019127
+---------------------------------------
+Injera Combo (Medium)           39.75
+   Details:
+     Base (Injera Combo x 1.50): 28.50
+     Special add-on:      3.00
+     Toppings:
+       • Shiro (Chickpea Stew)  4.50
+       • Doro Wot (Chicken Stew) (EXTRA)  3.75
+     Toppings total:      8.25
+
+Beyaynetu Vegetarian (Large)    58.73
+   Details:
+     Base (Beyaynetu Vegetarian x 2.00): 51.98
+     Special add-on:      4.00
+     Toppings:
+       • Doro Wot (Chicken Stew)  2.75
+     Toppings total:      2.75
+
+Drink (Large)                    3.00
+Berbere Spice Sauce (Medium)     1.50
+---------------------------------------
+TOTAL:                            102.98
+=======================================

@@ -1,0 +1,18 @@
+===== Ethiopian Restaurant Receipt =====
+Order ID : 20251113-232651
+Date/Time: 2025-11-13T23:26:51.676723
+---------------------------------------
+Kitfo Plate (Small)             29.13
+   Details:
+     Base (Kitfo Plate x 1.00): 20.88
+     Special add-on:      2.00
+     Toppings:
+       • Misir Wot (Spicy Lentils)  3.00
+       • Bozena Shiro (Meat Chickpea Stew) (EXTRA)  3.25
+     Toppings total:      6.25
+
+Drink (Medium)                   2.50
+Fresh Salad (Large)              1.50
+---------------------------------------
+TOTAL:                             33.13
+=======================================
