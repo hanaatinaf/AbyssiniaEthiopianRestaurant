@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/434de8a8-da10-4dc0-bdbe-3c02380c4f2d
 
 ## 📋 Table of Contents
 
-* ✨  [Features](#features)
+* [Features](#features)
 * [Project Structure](#project-structure)
 * [Installation](#installation)
 * [Usage](#usage)
@@ -146,7 +146,8 @@ When you start the application, you’ll see the Home Screen where you can creat
 
 ### **Order Screen**
 
-![ORDERSCREEN.png](Images/ORDERSCREEN.png)
+<img width="1283" height="267" alt="Screenshot 2025-11-14 at 10 01 58 AM" src="https://github.com/user-attachments/assets/328acb8c-f446-4a0b-b82c-a1110afc14f8" />
+
 ---
 
 # 🔧 Code Overview
