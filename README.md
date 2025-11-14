@@ -16,8 +16,8 @@ This project highlights clean OOP, interfaces, inheritance, enums, and file hand
 ---
 # 🎥 GIF Demo
 
+https://github.com/user-attachments/assets/434de8a8-da10-4dc0-bdbe-3c02380c4f2d
 
-https://github.com/user-attachments/assets/a3f88fc6-5b4d-4197-81f2-953c68506296
 
 
 
