@@ -49,12 +49,6 @@ public class Order {
         if (product != null && !isCompleted) {
             products.add(product); }
     }
-    //Removes a product from the order.
-    public void removeProduct(Product product) {
-        if (!isCompleted) {
-            products.remove(product);
-        }
-    }
     public double calculateTotal() {
         // Uses Java Streams to sum up product prices
         return products.stream()

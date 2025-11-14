@@ -7,18 +7,6 @@ import com.pluralsight.Enum.FoodType;
 import com.pluralsight.Enum.Size;
 
 public class EthiopianFoodItem extends Item {
-
-    // Base prices per size (you can tune these)
-    // These correspond to the "Type 1-4" base row in the Custom spec.
-    private static final double BASE_SMALL  = 3.50; // Size 1
-    private static final double BASE_MEDIUM = 9.00; // Size 2
-    private static final double BASE_LARGE  = 8.50; // Size 3 (weird but given in the PDF)
-
-    // Extra charge if the plate is "specialized"
-    private static final double SPECIAL_SMALL_EXTRA  = 1.00;
-    private static final double SPECIAL_MEDIUM_EXTRA = 1.50;
-    private static final double SPECIAL_LARGE_EXTRA  = 2.00;
-
     /* Public constructor used by your UI when the customer builds their own plate step-by-step.
      By default, we set the "name" to the FoodType display name. */
     public EthiopianFoodItem(FoodType type, Size size) {

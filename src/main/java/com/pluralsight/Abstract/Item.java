@@ -58,15 +58,6 @@ public abstract class Item extends Product implements Customizable {
         toppings.remove(topping);
     }
 
-    // Helper method for subclasses to calculate the total toppings cost based on the current size.
-
-    protected double calculateToppingsTotal() {
-        double total = 0.0;
-        for (Topping topping : toppings) {
-            total += topping.getPrice(getSize());
-        }
-        return total;
-    }
     // Subclasses MUST implement their own price logic using: - base price depending on size - toppings total
     @Override
     public abstract double calculatePrice();
