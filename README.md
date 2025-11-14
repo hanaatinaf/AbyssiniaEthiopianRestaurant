@@ -19,7 +19,7 @@ This project highlights clean OOP, interfaces, inheritance, enums, and file hand
 
 ## 📋 Table of Contents
 
-✨ [Features](#features)
+* [Features](#features)
 * [Project Structure](#project-structure)
 * [Installation](#installation)
 * [Usage](#usage)
